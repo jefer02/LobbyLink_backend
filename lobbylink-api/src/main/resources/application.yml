@@ -13,8 +13,8 @@ server:
 
 # ──────────────── JWT ────────────────
 jwt:
-  secret: 5b9c5f8f2a7d3e4a6f1b8c9d0e2f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f
-  expiration-ms: 86400000   # 24 horas en milisegundos
+  secret: ${JWT_SECRET:5b9c5f8f2a7d3e4a6f1b8c9d0e2f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f}
+  expiration-ms: ${JWT_EXPIRATION_MS:86400000}   # 24 horas en milisegundos
 
 # ──────────────── Swagger / OpenAPI ────────────────
 springdoc:
