@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: lobbylink-api
+
+  # ──────────────── MongoDB ────────────────
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/lobbylink_db
+      # Para Atlas: mongodb+srv://<user>:<password>@cluster.mongodb.net/lobbylink_db
+
+server:
+  port: 8080
+
+# ──────────────── JWT ────────────────
+jwt:
+  secret: 5b9c5f8f2a7d3e4a6f1b8c9d0e2f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f
+  expiration-ms: 86400000   # 24 horas en milisegundos
+
+# ──────────────── Swagger / OpenAPI ────────────────
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+# ──────────────── Logging ────────────────
+logging:
+  level:
+    com.lobbylink: DEBUG
+    org.springframework.security: INFO
+    org.springframework.data.mongodb: INFO
